@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="flex-container" fxLayout="row" fxLayout.xs="row" fxLayoutAlign="center" fxLayoutAlign.xs="center">
+    <div class="flex-item" fxFlex="50%" fxFlex.xs="100%">
+      <md-card class="example-card">
+        <md-card-header>
+          <div md-card-avatar class="example-header-image" [style.background-image]="'url('+user.avatar_url+')'"></div>
+          <md-card-title-group>
+            <md-card-title>{{user.login}}</md-card-title>
+            <md-card-subtitle>Dog Breed</md-card-subtitle>
+          </md-card-title-group>
+
+        </md-card-header>
+        <img md-card-image src="http://www.freeiconspng.com/uploads/dog-icon-2.jpg">
+        <md-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes
+            very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+          </p>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button>LIKE</button>
+          <button md-button>SHARE</button>
+        </md-card-actions>
+
+      </md-card>
+    </div>
+
+
+  </div>
+</div>

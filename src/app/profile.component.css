@@ -1,0 +1,5 @@
+.example-header-image{
+    background: url('http://www.freeiconspng.com/uploads/dog-icon-2.jpg');
+    background-size: contain;
+    background-position: center;
+}
