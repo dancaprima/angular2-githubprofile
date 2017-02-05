@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
 import 'hammerjs';
 import { ProfileComponent } from './profile.component';
-import { InputComponent } from './input.component';
+
 import { GithubService } from './github.service'
 
 
@@ -18,7 +18,7 @@ import { GithubService } from './github.service'
     HeaderComponent,
     ProfileComponent,
     ProfileComponent,
-    InputComponent
+
   ],
   imports: [
     BrowserModule,

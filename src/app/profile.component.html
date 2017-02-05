@@ -1,28 +1,58 @@
 <div class="container">
   <div class="flex-container" fxLayout="row" fxLayout.xs="row" fxLayoutAlign="center" fxLayoutAlign.xs="center">
     <div class="flex-item" fxFlex="50%" fxFlex.xs="100%">
+      <md-input-container class="example-full-width" >
+        <input md-input placeholder="Search..." [(ngModel)]="username" (keyup)="searchUser()">
+      </md-input-container>
       <md-card class="example-card">
         <md-card-header>
           <div md-card-avatar class="example-header-image" [style.background-image]="'url('+user.avatar_url+')'"></div>
-          <md-card-title-group>
-            <md-card-title>{{user.login}}</md-card-title>
-            <md-card-subtitle>Dog Breed</md-card-subtitle>
-          </md-card-title-group>
 
+
+
+
+          <md-chip-list>
+            <md-chip>Followers <span>{{user.followers}}</span></md-chip>
+            <md-chip>Following <span>{{user.following}}</span></md-chip>
+            <md-chip>Public Repos <span>{{user.public_repos}}</span></md-chip>
+          </md-chip-list>
         </md-card-header>
-        <img md-card-image src="http://www.freeiconspng.com/uploads/dog-icon-2.jpg">
+
         <md-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes
-            very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
-          </p>
+          <md-list>
+            <h3 md-subheader>Profile</h3>
+            <md-divider></md-divider>
+            <md-list-item>
+              <h5 md-line>Name : {{user.name}}</h5>
+            </md-list-item>
+            <md-list-item>
+              <h5 md-line>Location : {{user.location}}</h5>
+            </md-list-item>
+          </md-list>
         </md-card-content>
-        <md-card-actions>
-          <button md-button>LIKE</button>
-          <button md-button>SHARE</button>
-        </md-card-actions>
 
       </md-card>
+    </div>
+
+
+  </div>
+  <div class="flex-container" fxLayout="row" fxLayout.xs="row" fxLayoutAlign="center" fxLayoutAlign.xs="center">
+    <div class="flex-item" fxFlex="50%" fxFlex.xs="100%">
+
+
+
+      <md-list>
+        <h3 md-subheader>Repos</h3>
+        <md-divider></md-divider>
+        <md-list-item *ngFor="let repo of repos">
+          <h4 md-line>{{repo.name}}</h4>
+          <p md-line>{{repo.description}}</p>
+        </md-list-item>
+
+      </md-list>
+
+
+
     </div>
 
 

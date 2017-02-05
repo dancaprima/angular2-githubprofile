@@ -3,3 +3,19 @@
     background-size: contain;
     background-position: center;
 }
+
+md-card-title{
+    margin-bottom: 8px;
+}
+md-chips{
+    max-width: 60px;
+}
+
+md-card-header{
+    justify-content: space-between;
+}
+.example-full-width{
+    margin: 30px auto;
+    display: block;
+    width: 100%;
+}
